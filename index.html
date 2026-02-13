@@ -123,6 +123,14 @@ section{padding:var(--spacing-xl) var(--spacing-md)}
 @media(max-width:768px){.nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--color-cream);flex-direction:column;padding:var(--spacing-md);box-shadow:0 20px 40px rgba(0,0,0,0.1)}.nav-links.active{display:flex}.nav-toggle{display:flex}.trust-container{flex-direction:column;align-items:center}.hero{min-height:auto;padding-top:calc(80px + var(--spacing-md))}.about-credentials{justify-content:center}}
 @media(max-width:480px){.hero-cta-group{flex-direction:column}.btn{width:100%;justify-content:center}.form-container{padding:var(--spacing-md)}}
     </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9VQKHXK3X6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-9VQKHXK3X6');
+    </script>
 </head>
 <body>
     <nav class="nav">
@@ -316,7 +324,7 @@ section{padding:var(--spacing-xl) var(--spacing-md)}
         };
 
         try {
-            const response = await fetch('http://leadcore-alb-1845270722.us-east-1.elb.amazonaws.com/api/webhooks/form/vinculos-therapy', {
+            const response = await fetch('https://api.agencyvault.ai/api/webhooks/form/vinculos-therapy', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
